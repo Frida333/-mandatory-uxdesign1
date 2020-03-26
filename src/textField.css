@@ -1,0 +1,78 @@
+.textContainer {
+  position: relative;
+  width: 280px;
+  height: 56px;
+  margin-top: 20px;
+  margin-left: 55px;
+}
+
+.textField {
+  width: 100%;
+  height: 100%;
+  background-color: #E8E8E8;
+  border: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  position: absolute;
+  top:0px;
+  left:0px;
+  cursor: pointer;
+  line-height: 20px;
+  border-bottom: 1px solid #00000099;
+  padding: 0px;
+  padding-left: 12px;
+  box-sizing: border-box;
+}
+
+.name{
+  position: absolute;
+  bottom: 16px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.textField:focus  + .name{
+  top: 2px;
+  padding-left: 12px;
+  font-size: 12px;
+  transition: 0.5s;
+  color: #6200ee;
+}
+
+.textField:valid  + .name{
+  top: 2px;
+  padding-left: 12px;
+  font-size: 12px;
+  transition: 0.5s;
+  color: #00000099;
+}
+
+.textField:disabled + .name{
+  color: grey;
+  opacity: .3;
+  transition: .5s;
+}
+
+.textField:disabled {
+  background-color: grey;
+  opacity: .3;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.borderTextContainer {
+  height: 2px;
+  width: 0;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  background-color:  #6200ee;
+  transform: translateX(-50%);
+  transform-origin: center;
+  transition: 0.5s;
+}
+
+.textField:focus ~ .borderTextContainer{
+  width: 100%;
+  background-color:  #6200ee;
+}
